@@ -183,6 +183,15 @@ map  <C-h> :tabp<CR>
 map  <C-n> :tabnew<CR>
 map  <C-q> :tabclose<CR>
 
+" Enable/Disable spell checking ... 
+nnoremap ss :setlocal spell!
+
+" Spell checking shortcurt
+nnoremap <leader>sn ]s
+nnoremap <leader>sp [s
+nnoremap <leader>sa zg
+nnoremap <leader>sz z=
+
 " Save readonly file
 command! Sudow w !sudo tee % >/dev/null
 
