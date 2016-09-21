@@ -34,6 +34,13 @@
   diffr  = "!f() { git diff "$1"^.."$1"; }; f"
   f = "!git ls-files | grep -i"
 
+  # BRANCH 
+  bcl = "!f () { git co -b $1 ; }; f"
+  bcr = "!f () { git push -u origin $1 ; }; f"
+  
+  bdl = "!f () { git br -D $1 ; }; f"
+  bdr = "!f () { git push origin :$1 ; }; f"
+
 [color]
     diff = auto
     status = true
