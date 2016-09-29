@@ -63,6 +63,16 @@ set undodir=~/.vim/undo//
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
+" leave insert mode quickly
+if ! has('gui_running')
+	set ttimeoutlen=10
+	augroup FastEscape
+		autocmd!
+		au InsertEnter * set timeoutlen=0
+		au InsertLeave * set timeoutlen=1000
+	augroup END
+endif
+
 " == Installing the asciidoc.vim file
 " https://github.com/dagwieers/asciidoc-vim
 
@@ -114,37 +124,37 @@ autocmd BufEnter * NERDTreeMirror
 let mapleader = ","                                                                                                     " prefix
 let maplocalleader = "\\"                                                                       " eeee
 function! NumberToggle()
-   if(&relativenumber == 1)
-     set norelativenumber
-     set number
-     highlight LineNr ctermfg=yellow 
-   else
-    set nonumber
-    set relativenumber
-    highlight LineNr ctermfg=green  
-   endif
+	if(&relativenumber == 1)
+		set norelativenumber
+		set number
+		highlight LineNr ctermfg=yellow 
+	else
+		set nonumber
+		set relativenumber
+		highlight LineNr ctermfg=green  
+	endif
 endfunc
 
 nnoremap <silent><leader>n :call NumberToggle() <cr>
 
 
 function! NoNumber()
-    set nonumber
-    set norelativenumber
+	set nonumber
+	set norelativenumber
 endfunc
 
 nnoremap <silent><leader>fn :call NoNumber() <cr>
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
-  " Use Ag over Grep
-   set grepprg=ag\ --nogroup\ --nocolor
+	" Use Ag over Grep
+	set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+	" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+	let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-  " ag is fast enough that CtrlP doesn't need to cache
-   let g:ctrlp_use_caching = 0
+	" ag is fast enough that CtrlP doesn't need to cache
+	let g:ctrlp_use_caching = 0
 endif
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>                " Edit
