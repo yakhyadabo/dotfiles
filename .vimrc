@@ -60,6 +60,9 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
+
 " == Installing the asciidoc.vim file
 " https://github.com/dagwieers/asciidoc-vim
 
