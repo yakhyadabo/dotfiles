@@ -1,1 +1,29 @@
 == My config files for vim, git, tmux ...
+
+=== Install Vundle (Plugin Manager)
+
+[source,shell]
+----
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+----
+
+=== Config VIM (Plugins, Mappings Shortcuts, ...)
+
+Clone project under /tmp/dotfiles
+[source,shell]
+----
+$ rm -rf /tmp/dotfiles
+$ git clone https://github.com/yakhyadabo/dotfiles.git /tmp/dotfiles
+----
+
+Copy .vimrc 
+[source,shell]
+----
+$ cp /tmp/dotfiles/.vimrc ~/
+----
+
+Create backup folders. 
+[source,shell]
+----
+$ mkdir .vim/{backup,swap,undo} # backup folders
+----
