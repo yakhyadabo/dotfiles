@@ -25,5 +25,14 @@ $ cp /tmp/dotfiles/.vimrc ~/
 Create backup folders. 
 [source,shell]
 ----
-$ mkdir .vim/{backup,swap,undo} # backup folders
+$ mkdir ~/.vim/{backup,swap,undo} # backup folders
+----
+
+Asciidoc syntax highlight for vim
+
+[source,shell]
+----
+$ git clone https://github.com/dagwieers/asciidoc-vim.git /tmp/asciidoc-vim
+$ mv /tmp/asciidoc-vim/syntax ~/.vim
+$ rm -rf /tmp/asciidoc-vim
 ----
