@@ -12,7 +12,6 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 Clone project under /tmp/dotfiles
 [source,shell]
 ----
-$ rm -rf /tmp/dotfiles
 $ git clone https://github.com/yakhyadabo/dotfiles.git /tmp/dotfiles
 ----
 
@@ -20,6 +19,7 @@ Copy .vimrc
 [source,shell]
 ----
 $ cp /tmp/dotfiles/.vimrc ~/
+$ rm -rf /tmp/dotfiles
 ----
 
 Create backup folders. 
@@ -28,7 +28,9 @@ Create backup folders.
 $ mkdir ~/.vim/{backup,swap,undo} # backup folders
 ----
 
-Asciidoc syntax highlight for vim
+And finally launch *vim* and run *:PluginInstall* in Command Line mode. 
+
+=== Bonus: Asciidoc syntax highlight for vim
 
 [source,shell]
 ----
@@ -36,3 +38,5 @@ $ git clone https://github.com/dagwieers/asciidoc-vim.git /tmp/asciidoc-vim
 $ mv /tmp/asciidoc-vim/syntax ~/.vim
 $ rm -rf /tmp/asciidoc-vim
 ----
+
+
