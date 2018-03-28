@@ -23,6 +23,9 @@ set smartcase
 "highlight search
 set hlsearch
 
+" Don't ident when pasting from clipboard 
+set paste
+
 " Highlight cursor position with an horizontal line.
 set cursorline
 
