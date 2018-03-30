@@ -30,6 +30,27 @@ $ mkdir ~/.vim/{backup,swap,undo} # backup folders
 
 And finally launch *vim* and run *:PluginInstall* in Command Line mode. 
 
+=== Poweline fonts
+
+Clone
+[source,shell]
+----
+git clone https://github.com/powerline/fonts.git --depth=1 /tmp/powerline-fonts
+----
+
+Install
+[source,shell]
+----
+/tmp/powerline-fonts/install.sh
+----
+
+# clean-up a bit
+
+[source,shell]
+----
+rm -rf /tmp/powerline-fonts 
+----
+
 === Bonus: Asciidoc syntax highlight for vim
 
 [source,shell]
@@ -38,5 +59,3 @@ $ git clone https://github.com/dagwieers/asciidoc-vim.git /tmp/asciidoc-vim
 $ mv /tmp/asciidoc-vim/syntax ~/.vim
 $ rm -rf /tmp/asciidoc-vim
 ----
-
-
