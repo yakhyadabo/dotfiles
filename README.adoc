@@ -30,6 +30,29 @@ $ mkdir ~/.vim/{backup,swap,undo} # backup folders
 
 And finally launch *vim* and run *:PluginInstall* in Command Line mode. 
 
+=== ZSH
+
+Debian 
+
+[source,shell]
+----
+apt install zsh
+----
+
+Mac OS
+
+[source,shell]
+----
+brew install zsh zsh-completions
+----
+
+=== Oh My ZSH
+
+[source,shell]
+----
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+----
+
 === Poweline fonts
 
 Clone
@@ -44,8 +67,7 @@ Install
 /tmp/powerline-fonts/install.sh
 ----
 
-# clean-up a bit
-
+clean-up a bit
 [source,shell]
 ----
 rm -rf /tmp/powerline-fonts 
