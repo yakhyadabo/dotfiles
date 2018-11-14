@@ -113,6 +113,10 @@ Plugin 'tomtom/tcomment_vim'
 " Docker plugin
 Plugin 'ekalinin/Dockerfile.vim'
 
+
+" Go plugin
+Plugin 'fatih/vim-go'
+
 " Now we can turn our filetype functionality back on
 
 " All of your Plugins must be added before the following line
