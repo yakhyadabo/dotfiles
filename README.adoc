@@ -19,7 +19,6 @@ Copy .vimrc
 [source,shell]
 ----
 $ cp /tmp/dotfiles/.vimrc ~/
-$ rm -rf /tmp/dotfiles
 ----
 
 Create backup folders. 
@@ -51,6 +50,16 @@ brew install zsh zsh-completions
 [source,shell]
 ----
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+----
+
+=== TMUX
+
+Debian 
+
+[source,shell]
+----
+$ apt install tmux
+$ cp /tmp/dotfiles/.tmux ~/
 ----
 
 === Poweline fonts
