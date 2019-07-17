@@ -59,7 +59,7 @@ Debian
 [source,shell]
 ----
 $ apt install tmux
-$ cp /tmp/dotfiles/.tmux ~/
+$ cp /tmp/dotfiles/.tmux.conf ~/
 ----
 
 === Poweline fonts
