@@ -23,6 +23,9 @@ set smartcase
 "highlight search
 set hlsearch
 
+" Get rid of the newline character (\n) in the last line. Some applications don't like that character.
+set noendofline binary
+
 " Don't ident when pasting from clipboard 
 set paste
 
